@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') -%>
+    <%- include('../partials/navbar.ejs') -%>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="d-inline-flex col-sm-6 col-md-12 border border-light bg-light p-4 shadow-lg p-5 mb-5 bg-white rounded">
+                    <div class="col col-md-1">
+                        <span class="badge badge-primary"><%= match.isActive%></span>
+                    </div>
+                    <div class="col col-md-4">
+                        <h1 class="card-text">
+                            <%= match.homeTeam%>
+                        </h1>
+                    </div>
+                    <div class="col col-md-4">
+                        <h1>
+                            <%= match.homeTeamScore%>
+                                -
+                                <%= match.awayTeamScore%>
+                        </h1>
+                    </div>
+                    <div class="col col-md-4">
+                        <h1 class="card-text">
+                            <%= match.awayTeam%>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-12 border border-light bg-light p-4 shadow-lg p-5 mb-5 bg-white rounded">
+                <h3>Match Details</h3>
+                <hr>
+                <h6>Date of Match :
+                    <%= match.date.toDateString()%>
+                </h6>
+                <h6>The Match is :
+                    <%= match.isActive%>
+                </h6>
+                <h6>Match Start at :
+                    <%= match.startTime%>
+                </h6>
+                <h6>Match End at :
+                    <%= match.endTime%>
+                </h6>
+                <h6>League :
+                    <%= match.league%>
+                </h6>
+            </div>
+            <a href="<%= '/matches/edit/' + match.id %>" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger" onclick="deleteMatch()" id="deleteBtn" data-id="<%= match.id%>">Delete</button>
+        </div>
+
+
+        <%- include('../partials/footer.ejs') -%>

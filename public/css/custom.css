@@ -1,0 +1,18 @@
+#myInput {
+    width: 20%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0 50px;
+}
+
+ul li a {
+    text-decoration: none !important;
+    font-size: 18px;
+    color: black;
+}
